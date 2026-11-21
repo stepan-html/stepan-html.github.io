@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300">
+  <!-- Стилизованная карта-заглушка (адрес вымышленный) -->
+  <rect width="560" height="300" fill="#EDE2D3"/>
+
+  <!-- Парк -->
+  <rect x="330" y="20" width="200" height="110" rx="14" fill="#C9D3BE"/>
+  <circle cx="370" cy="60" r="14" fill="#A9B89B"/>
+  <circle cx="420" cy="90" r="18" fill="#A9B89B"/>
+  <circle cx="480" cy="55" r="16" fill="#A9B89B"/>
+  <text x="430" y="122" font-family="Arial, sans-serif" font-size="13" fill="#5E6B54" text-anchor="middle">Сквер</text>
+
+  <!-- Кварталы -->
+  <g fill="#E2D4C1">
+    <rect x="30" y="20" width="120" height="90" rx="10"/>
+    <rect x="180" y="20" width="120" height="90" rx="10"/>
+    <rect x="30" y="180" width="120" height="100" rx="10"/>
+    <rect x="330" y="180" width="200" height="100" rx="10"/>
+  </g>
+
+  <!-- Улицы -->
+  <g fill="#FFFBF6">
+    <rect x="0" y="130" width="560" height="34"/>
+    <rect x="160" y="0" width="14" height="300"/>
+    <rect x="308" y="0" width="14" height="300"/>
+  </g>
+  <text x="80" y="152" font-family="Arial, sans-serif" font-size="13" fill="#6E5646">ул. Каштановая</text>
+
+  <!-- Здание кофейни -->
+  <rect x="180" y="180" width="120" height="100" rx="10" fill="#E9C9A3"/>
+
+  <!-- Метка -->
+  <g transform="translate(240 200)">
+    <ellipse cx="0" cy="40" rx="14" ry="5" fill="#3B2A20" opacity=".2"/>
+    <path d="M0 40c-16-20-24-32-24-44a24 24 0 0 1 48 0c0 12-8 24-24 44z" fill="#C8874B"/>
+    <circle cx="0" cy="-4" r="9" fill="#FFFBF6"/>
+  </g>
+  <rect x="190" y="252" width="100" height="22" rx="11" fill="#3B2A20"/>
+  <text x="240" y="267" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F6EFE6" text-anchor="middle">Каштановая, 12</text>
+</svg>

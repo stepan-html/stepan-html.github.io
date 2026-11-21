@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Базовое SEO ===== -->
+  <title>Барбершоп «Кремень» — мужские стрижки и бритьё, онлайн-запись</title>
+  <meta name="description" content="Барбершоп «Кремень» на Литейной, 7: мужские стрижки, фейды, оформление бороды и королевское бритьё. Опытные мастера, запись онлайн за минуту.">
+
+  <!-- ===== Open Graph ===== -->
+  <!-- Для реального сайта: og:image — полный адрес (https://ваш-домен/img/og.png) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Барбершоп «Кремень»">
+  <meta property="og:description" content="Мужские стрижки, борода и бритьё. Онлайн-запись к мастеру.">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!-- Шрифты: Oswald (заголовки) + Inter (текст), оба с кириллицей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Набор иконок: рисуем один раз, используем через <use href="#icon-..."> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icon-scissors" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="16" cy="48" r="8"/><circle cx="48" cy="48" r="8"/><path d="M21 42 50 6M43 42 14 6"/></g></symbol>
+    <symbol id="icon-razor" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M8 24h34l6 8H8z"/><path d="M42 24l14-14 4 4-12 18"/><path d="M14 32v6"/></g></symbol>
+    <symbol id="icon-comb" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="6" y="18" width="52" height="10" rx="2"/><path d="M12 28v18M19 28v18M26 28v18M33 28v18M40 28v18M47 28v18M54 28v18"/></g></symbol>
+    <symbol id="icon-clipper" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M22 14h20l4 40H18z"/><path d="M20 8h24v6H20zM26 26h12M26 34h12"/></g></symbol>
+    <symbol id="icon-brush" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M22 6c-10 8-10 22 0 26h20c10-4 10-18 0-26z"/><path d="M24 32h16v6H24zM26 38h12l2 20H24z"/></g></symbol>
+    <symbol id="icon-beard" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M10 18c0 22 8 38 22 40 14-2 22-18 22-40-6 8-12 10-22 10S16 26 10 18z"/><path d="M22 36c6-4 14-4 20 0"/></g></symbol>
+  </svg>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="На главную">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Кремень</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#prices" class="nav__link">Прайс</a>
+        <a href="#masters" class="nav__link">Мастера</a>
+        <a href="#works" class="nav__link">Работы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="#booking" class="btn btn--accent nav__cta-mobile">Записаться</a>
+      </nav>
+
+      <a href="#booking" class="btn btn--accent header__cta">Записаться</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== 1. ПЕРВЫЙ ЭКРАН ===================== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__label">Барбершоп · Литейная, 7</p>
+          <h1 class="hero__title">Стрижка, после которой <span>хочется смотреть</span> в&nbsp;зеркало</h1>
+          <p class="hero__text">Классические и современные мужские стрижки, оформление бороды и&nbsp;бритьё опасной бритвой. Без&nbsp;спешки — на&nbsp;каждого гостя закладываем час.</p>
+
+          <div class="hero__buttons">
+            <a href="#booking" class="btn btn--accent">Записаться онлайн</a>
+            <a href="#prices" class="btn btn--ghost">Смотреть прайс</a>
+          </div>
+
+          <ul class="stats">
+            <li><b>8 лет</b><span>на Литейной</span></li>
+            <li><b>4</b><span>мастера</span></li>
+            <li><b>12 000+</b><span>стрижек</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <img src="img/emblem.svg" alt="" width="440" height="440">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. УСЛУГИ И ПРАЙС ===================== -->
+    <!-- Чтобы добавить услугу — скопируйте строку <li class="price-row">...</li> -->
+    <section class="prices section" id="prices">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">Услуги и цены</p>
+          <h2 class="section__title">Прайс</h2>
+          <p class="section__text">Цены указаны для мастера уровня «Барбер». У&nbsp;топ-барбера и&nbsp;арт-директора — +20%.</p>
+        </div>
+
+        <div class="prices__grid">
+          <article class="price-card reveal">
+            <h3 class="price-card__title"><svg width="28" height="28"><use href="#icon-scissors"/></svg>Стрижки</h3>
+            <ul class="price-list">
+              <li class="price-row"><span class="price-row__name">Мужская стрижка</span><span class="price-row__time">60 мин</span><span class="price-row__price">1 800 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Фейд (плавный переход)</span><span class="price-row__time">60 мин</span><span class="price-row__price">2 000 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Удлинённая стрижка</span><span class="price-row__time">75 мин</span><span class="price-row__price">2 200 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Стрижка машинкой</span><span class="price-row__time">30 мин</span><span class="price-row__price">1 000 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Детская (до 12 лет)</span><span class="price-row__time">45 мин</span><span class="price-row__price">1 300 ₽</span></li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal">
+            <h3 class="price-card__title"><svg width="28" height="28"><use href="#icon-razor"/></svg>Борода и бритьё</h3>
+            <ul class="price-list">
+              <li class="price-row"><span class="price-row__name">Моделирование бороды</span><span class="price-row__time">40 мин</span><span class="price-row__price">1 200 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Королевское бритьё</span><span class="price-row__time">45 мин</span><span class="price-row__price">1 800 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Бритьё головы</span><span class="price-row__time">40 мин</span><span class="price-row__price">1 500 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Камуфляж седины</span><span class="price-row__time">30 мин</span><span class="price-row__price">1 400 ₽</span></li>
+            </ul>
+          </article>
+
+          <article class="price-card price-card--accent reveal">
+            <h3 class="price-card__title"><svg width="28" height="28"><use href="#icon-beard"/></svg>Комплексы</h3>
+            <ul class="price-list">
+              <li class="price-row"><span class="price-row__name">Стрижка + борода <em class="tag">Хит</em></span><span class="price-row__time">90 мин</span><span class="price-row__price">2 800 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Отец + сын</span><span class="price-row__time">90 мин</span><span class="price-row__price">2 900 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Стрижка + королевское бритьё</span><span class="price-row__time">105 мин</span><span class="price-row__price">3 300 ₽</span></li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal">
+            <h3 class="price-card__title"><svg width="28" height="28"><use href="#icon-brush"/></svg>Дополнительно</h3>
+            <ul class="price-list">
+              <li class="price-row"><span class="price-row__name">Укладка</span><span class="price-row__time">15 мин</span><span class="price-row__price">500 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Окантовка</span><span class="price-row__time">15 мин</span><span class="price-row__price">600 ₽</span></li>
+              <li class="price-row"><span class="price-row__name">Чёрная маска</span><span class="price-row__time">20 мин</span><span class="price-row__price">700 ₽</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. МАСТЕРА ===================== -->
+    <!-- Кнопка «Записаться» с data-master подставляет мастера в форму (см. script.js) -->
+    <section class="masters section section--alt" id="masters">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">Команда</p>
+          <h2 class="section__title">Мастера</h2>
+        </div>
+
+        <div class="masters__grid">
+          <article class="master reveal">
+            <div class="master__photo master__photo--1"><span>А</span></div>
+            <p class="master__level">Арт-директор</p>
+            <h3 class="master__name">Артём</h3>
+            <p class="master__info">Стаж 12 лет · классика, бритьё</p>
+            <p class="master__price">от 2 160 ₽</p>
+            <a href="#booking" class="btn btn--ghost btn--small" data-master="Артём">Записаться</a>
+          </article>
+
+          <article class="master reveal">
+            <div class="master__photo master__photo--2"><span>И</span></div>
+            <p class="master__level">Топ-барбер</p>
+            <h3 class="master__name">Илья</h3>
+            <p class="master__info">Стаж 7 лет · фейды, текстура</p>
+            <p class="master__price">от 2 160 ₽</p>
+            <a href="#booking" class="btn btn--ghost btn--small" data-master="Илья">Записаться</a>
+          </article>
+
+          <article class="master reveal">
+            <div class="master__photo master__photo--3"><span>Р</span></div>
+            <p class="master__level">Барбер</p>
+            <h3 class="master__name">Руслан</h3>
+            <p class="master__info">Стаж 4 года · бороды</p>
+            <p class="master__price">от 1 800 ₽</p>
+            <a href="#booking" class="btn btn--ghost btn--small" data-master="Руслан">Записаться</a>
+          </article>
+
+          <article class="master reveal">
+            <div class="master__photo master__photo--4"><span>Т</span></div>
+            <p class="master__level">Барбер</p>
+            <h3 class="master__name">Тимур</h3>
+            <p class="master__info">Стаж 2 года · детские стрижки</p>
+            <p class="master__price">от 1 800 ₽</p>
+            <a href="#booking" class="btn btn--ghost btn--small" data-master="Тимур">Записаться</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. ГАЛЕРЕЯ РАБОТ ===================== -->
+    <!-- Заглушки. Для реального сайта замените .work__art на <img src="img/work-1.jpg" alt="..."> -->
+    <section class="works section" id="works">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">Портфолио</p>
+          <h2 class="section__title">Наши работы</h2>
+        </div>
+
+        <div class="works__grid">
+          <figure class="work reveal"><div class="work__art"><svg><use href="#icon-clipper"/></svg></div><figcaption>Фейд + борода</figcaption></figure>
+          <figure class="work reveal"><div class="work__art"><svg><use href="#icon-scissors"/></svg></div><figcaption>Классический кроп</figcaption></figure>
+          <figure class="work reveal"><div class="work__art"><svg><use href="#icon-razor"/></svg></div><figcaption>Королевское бритьё</figcaption></figure>
+          <figure class="work reveal"><div class="work__art"><svg><use href="#icon-comb"/></svg></div><figcaption>Помпадур</figcaption></figure>
+          <figure class="work reveal"><div class="work__art"><svg><use href="#icon-beard"/></svg></div><figcaption>Борода «лопата»</figcaption></figure>
+          <figure class="work reveal"><div class="work__art"><svg><use href="#icon-brush"/></svg></div><figcaption>Андеркат</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. ОТЗЫВЫ ===================== -->
+    <section class="reviews section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">Отзывы</p>
+          <h2 class="section__title">Что говорят гости</h2>
+        </div>
+
+        <div class="reviews__grid">
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+            <p>«Хожу к Илье второй год. Фейд держится идеально три недели, плюс всегда нальют хороший кофе».</p>
+            <footer>— Константин</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+            <p>«Первый раз попробовал королевское бритьё — горячее полотенце, опасная бритва, полчаса тишины. Советую».</p>
+            <footer>— Олег</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-label="Оценка 5 из 5">★★★★★</p>
+            <p>«Пришли с сыном на комплекс „Отец + сын“. Сын теперь сам просится к Тимуру. Атмосфера отличная».</p>
+            <footer>— Сергей</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. ЗАПИСЬ И КОНТАКТЫ ===================== -->
+    <section class="contacts section" id="contacts">
+      <div class="container contacts__inner">
+
+        <!-- Форма записи -->
+        <div class="booking reveal" id="booking">
+          <p class="section__label">Онлайн-запись</p>
+          <h2 class="section__title">Записаться к&nbsp;мастеру</h2>
+
+          <form class="form" id="booking-form" novalidate>
+            <div class="form__row">
+              <label class="form__field">
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+              </label>
+              <label class="form__field">
+                <span>Телефон</span>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" inputmode="tel">
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label class="form__field">
+                <span>Услуга</span>
+                <select name="service" required>
+                  <option value="">Выберите услугу</option>
+                  <option>Мужская стрижка — 1 800 ₽</option>
+                  <option>Фейд — 2 000 ₽</option>
+                  <option>Стрижка + борода — 2 800 ₽</option>
+                  <option>Моделирование бороды — 1 200 ₽</option>
+                  <option>Королевское бритьё — 1 800 ₽</option>
+                  <option>Отец + сын — 2 900 ₽</option>
+                  <option>Детская стрижка — 1 300 ₽</option>
+                </select>
+              </label>
+              <label class="form__field">
+                <span>Мастер</span>
+                <select name="master" id="master-select">
+                  <option>Любой мастер</option>
+                  <option>Артём</option>
+                  <option>Илья</option>
+                  <option>Руслан</option>
+                  <option>Тимур</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label class="form__field">
+                <span>Дата</span>
+                <input type="date" name="date" id="booking-date" required>
+              </label>
+              <label class="form__field">
+                <span>Время</span>
+                <select name="time" required>
+                  <option value="">—</option>
+                  <option>10:00</option><option>11:00</option><option>12:00</option>
+                  <option>13:00</option><option>14:00</option><option>15:00</option>
+                  <option>16:00</option><option>17:00</option><option>18:00</option>
+                  <option>19:00</option><option>20:00</option>
+                </select>
+              </label>
+            </div>
+
+            <p class="form__error" id="form-error" role="alert"></p>
+            <button type="submit" class="btn btn--accent btn--full">Записаться</button>
+            <p class="form__policy">Нажимая кнопку, вы соглашаетесь на&nbsp;обработку персональных данных.</p>
+          </form>
+
+          <div class="form__success" id="form-success" hidden>
+            <div class="form__success-icon">✓</div>
+            <p><b>Спасибо!</b> Мы свяжемся с&nbsp;вами.</p>
+          </div>
+        </div>
+
+        <!-- Контакты -->
+        <div class="contacts__info reveal">
+          <h3 class="contacts__title">Как нас найти</h3>
+          <p class="contacts__address">ул. Литейная, 7 — цокольный этаж, вывеска с&nbsp;бритвой</p>
+
+          <p class="status" id="open-status">Проверяем часы работы…</p>
+          <p class="contacts__hours">Ежедневно с&nbsp;10:00 до&nbsp;22:00</p>
+
+          <!-- Кнопки связи. Замените номер и username на реальные -->
+          <div class="messengers">
+            <a href="https://t.me/username" class="messenger messenger--tg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+              Telegram
+            </a>
+            <a href="https://wa.me/79990003344" class="messenger messenger--wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+79990003344" class="messenger messenger--phone">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+              +7 (999) 000-33-44
+            </a>
+          </div>
+
+          <!-- Карта-заглушка. Для реального сайта — iframe Яндекс.Карт -->
+          <img src="img/map.svg" alt="Схема проезда: барбершоп на Литейной, 7" class="contacts__map" width="560" height="300" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">
+        <img src="img/logo.svg" alt="" width="36" height="36">
+        <span class="logo__text">Кремень</span>
+      </a>
+      <nav class="footer__links" aria-label="Контакты">
+        <a href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79990003344" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+79990003344">+7 (999) 000-33-44</a>
+      </nav>
+      <p class="footer__copy">© 2026 Барбершоп «Кремень»</p>
+      <p class="footer__demo">Демо-проект. Компания вымышленная.</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка записи (только на мобильных) -->
+  <a href="#booking" class="float-btn" aria-label="Записаться онлайн">
+    <svg width="26" height="26" viewBox="0 0 64 64"><use href="#icon-scissors"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

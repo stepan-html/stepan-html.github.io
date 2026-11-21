@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Базовое SEO ===== -->
+  <title>Студия йоги «Листва» — хатха, виньяса, йога для спины. Расписание и абонементы</title>
+  <meta name="description" content="Студия йоги «Листва»: занятия для начинающих и продолжающих, хатха, виньяса, мягкая йога для спины и медитация. Удобное расписание, первое занятие бесплатно.">
+
+  <!-- ===== Open Graph ===== -->
+  <!-- Для реального сайта: og:image — полный адрес (https://ваш-домен/img/og.png) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Студия йоги «Листва»">
+  <meta property="og:description" content="Хатха, виньяса, йога для спины и медитация. Первое занятие бесплатно.">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!-- Шрифты: Cormorant Garamond (заголовки) + Nunito (текст), оба с кириллицей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="На главную">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Листва<small>студия йоги</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#directions" class="nav__link">Направления</a>
+        <a href="#schedule" class="nav__link">Расписание</a>
+        <a href="#prices" class="nav__link">Абонементы</a>
+        <a href="#team" class="nav__link">Преподаватели</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="#signup" class="btn btn--primary nav__cta-mobile">Записаться</a>
+      </nav>
+
+      <a href="#signup" class="btn btn--primary header__cta">Записаться</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== 1. ПЕРВЫЙ ЭКРАН ===================== -->
+    <section class="hero">
+      <div class="blob blob--1" aria-hidden="true"></div>
+      <div class="blob blob--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__label">Студия йоги в&nbsp;центре города</p>
+          <h1 class="hero__title">Найдите опору&nbsp;— <em>в&nbsp;теле и&nbsp;в&nbsp;мыслях</em></h1>
+          <p class="hero__text">Небольшие группы до&nbsp;10 человек, внимательные преподаватели и&nbsp;светлый зал с&nbsp;панорамными окнами. Подходит, даже если вы ни&nbsp;разу не&nbsp;занимались.</p>
+
+          <div class="hero__buttons">
+            <a href="#signup" class="btn btn--primary">Первое занятие бесплатно</a>
+            <a href="#schedule" class="btn btn--ghost">Расписание</a>
+          </div>
+        </div>
+
+        <!-- Арка с иллюстрацией. Для реального сайта: <img src="img/hero.jpg"> внутри .arch -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="arch">
+            <img src="img/pose.svg" alt="" width="400" height="500">
+          </div>
+          <div class="hero__badge"><b>4.9</b><span>оценка учеников</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. НАПРАВЛЕНИЯ ===================== -->
+    <section class="directions section" id="directions">
+      <div class="container">
+        <p class="section__label">Направления</p>
+        <h2 class="section__title">Выберите свою практику</h2>
+
+        <div class="directions__grid">
+          <article class="direction reveal">
+            <div class="direction__icon direction__icon--sage">
+              <svg viewBox="0 0 48 48"><path d="M24 40V18M24 18c-8 0-12-6-12-12 8 0 12 5 12 12zM24 24c8 0 12-6 12-12-8 0-12 5-12 12z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Хатха-йога</h3>
+            <p>Классика: асаны в&nbsp;спокойном темпе, работа с&nbsp;дыханием. База для любой практики.</p>
+            <p class="direction__level"><span class="lvl lvl--1"></span>для всех уровней</p>
+          </article>
+          <article class="direction reveal">
+            <div class="direction__icon direction__icon--peach">
+              <svg viewBox="0 0 48 48"><path d="M6 30c6-10 12-10 18 0s12 10 18 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M6 20c6-10 12-10 18 0s12 10 18 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/></svg>
+            </div>
+            <h3>Виньяса-флоу</h3>
+            <p>Динамичные связки под&nbsp;дыхание. Хорошо прогревает и&nbsp;даёт заряд энергии.</p>
+            <p class="direction__level"><span class="lvl lvl--2"></span>средний уровень</p>
+          </article>
+          <article class="direction reveal">
+            <div class="direction__icon direction__icon--sand">
+              <svg viewBox="0 0 48 48"><path d="M24 6c-4 6-4 10 0 14s4 8 0 14-4 8 0 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 14h16M15 24h18M16 34h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/></svg>
+            </div>
+            <h3>Йога для спины</h3>
+            <p>Мягкие упражнения для тех, кто много сидит. Снимаем напряжение с&nbsp;шеи и&nbsp;поясницы.</p>
+            <p class="direction__level"><span class="lvl lvl--1"></span>для начинающих</p>
+          </article>
+          <article class="direction reveal">
+            <div class="direction__icon direction__icon--sage">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".6"/><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".3"/></svg>
+            </div>
+            <h3>Медитация</h3>
+            <p>Дыхательные практики и&nbsp;медитация. 45 минут тишины в&nbsp;конце рабочего дня.</p>
+            <p class="direction__level"><span class="lvl lvl--1"></span>для всех уровней</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. РАСПИСАНИЕ ===================== -->
+    <!-- Само расписание лежит в script.js (массив SCHEDULE) — меняйте занятия там -->
+    <section class="schedule section section--soft" id="schedule">
+      <div class="container">
+        <p class="section__label">Расписание</p>
+        <h2 class="section__title">Занятия на&nbsp;неделе</h2>
+
+        <div class="schedule__controls">
+          <div class="days" id="days" role="tablist" aria-label="Дни недели"></div>
+          <div class="filters" id="filters" aria-label="Фильтр по направлениям">
+            <button type="button" class="filter is-active" data-type="all">Все</button>
+            <button type="button" class="filter" data-type="Хатха">Хатха</button>
+            <button type="button" class="filter" data-type="Виньяса">Виньяса</button>
+            <button type="button" class="filter" data-type="Для спины">Для спины</button>
+            <button type="button" class="filter" data-type="Медитация">Медитация</button>
+          </div>
+        </div>
+
+        <ul class="lessons" id="lessons" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== 4. АБОНЕМЕНТЫ ===================== -->
+    <section class="prices section" id="prices">
+      <div class="container">
+        <p class="section__label">Абонементы</p>
+        <h2 class="section__title">Стоимость занятий</h2>
+
+        <div class="prices__grid">
+          <article class="price reveal">
+            <h3>Пробное</h3>
+            <p class="price__value">0 ₽</p>
+            <p class="price__desc">Первое занятие в&nbsp;любом направлении</p>
+            <a href="#signup" class="btn btn--ghost btn--full" data-plan="Пробное занятие">Записаться</a>
+          </article>
+          <article class="price reveal">
+            <h3>Разовое</h3>
+            <p class="price__value">900 ₽</p>
+            <p class="price__desc">Одно занятие, коврик и&nbsp;плед включены</p>
+            <a href="#signup" class="btn btn--ghost btn--full" data-plan="Разовое занятие">Выбрать</a>
+          </article>
+          <article class="price price--popular reveal">
+            <span class="price__badge">Популярный</span>
+            <h3>8 занятий</h3>
+            <p class="price__value">5 600 ₽</p>
+            <p class="price__desc">700 ₽ за&nbsp;занятие · действует 6&nbsp;недель · заморозка 7&nbsp;дней</p>
+            <a href="#signup" class="btn btn--primary btn--full" data-plan="Абонемент на 8 занятий">Выбрать</a>
+          </article>
+          <article class="price reveal">
+            <h3>Безлимит</h3>
+            <p class="price__value">7 900 ₽</p>
+            <p class="price__desc">Любые занятия 30&nbsp;дней · гостевой визит для&nbsp;друга</p>
+            <a href="#signup" class="btn btn--ghost btn--full" data-plan="Безлимит на месяц">Выбрать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. ПРЕПОДАВАТЕЛИ И ОТЗЫВЫ ===================== -->
+    <section class="team section section--soft" id="team">
+      <div class="container">
+        <p class="section__label">Команда</p>
+        <h2 class="section__title">Преподаватели</h2>
+
+        <div class="team__grid">
+          <article class="teacher reveal">
+            <div class="teacher__photo teacher__photo--1">М</div>
+            <h3>Марина</h3>
+            <p>Хатха, йога для&nbsp;спины · 10&nbsp;лет практики</p>
+          </article>
+          <article class="teacher reveal">
+            <div class="teacher__photo teacher__photo--2">А</div>
+            <h3>Алексей</h3>
+            <p>Виньяса-флоу · 7&nbsp;лет практики</p>
+          </article>
+          <article class="teacher reveal">
+            <div class="teacher__photo teacher__photo--3">Е</div>
+            <h3>Екатерина</h3>
+            <p>Медитация, дыхание · 6&nbsp;лет практики</p>
+          </article>
+        </div>
+
+        <div class="reviews">
+          <blockquote class="review reveal">
+            <p>«Пришла с&nbsp;болью в&nbsp;пояснице после сидячей работы. Через месяц занятий у&nbsp;Марины забыла, что такое „потянуть спину“».</p>
+            <footer>— Анастасия, занимается 8 месяцев</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Очень светло и&nbsp;спокойно. Маленькие группы — преподаватель видит каждого и&nbsp;поправляет».</p>
+            <footer>— Дмитрий, занимается 3 месяца</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Вечерняя медитация по&nbsp;средам — лучшая часть недели. Сплю после неё как ребёнок».</p>
+            <footer>— Вера, занимается год</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. ЗАПИСЬ И КОНТАКТЫ ===================== -->
+    <section class="contacts section" id="contacts">
+      <div class="container contacts__inner">
+
+        <div class="signup reveal" id="signup">
+          <p class="section__label">Запись</p>
+          <h2 class="section__title">Приходите на&nbsp;первое занятие</h2>
+          <p class="signup__text">Оставьте заявку — администратор перезвонит и&nbsp;подберёт удобное время.</p>
+
+          <form class="form" id="signup-form" novalidate>
+            <label class="form__field">
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+            </label>
+            <label class="form__field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" inputmode="tel">
+            </label>
+            <label class="form__field">
+              <span>Занятие или абонемент</span>
+              <!-- Сюда подставляется занятие из расписания или выбранный абонемент -->
+              <input type="text" name="lesson" id="signup-lesson" placeholder="Например, пробное занятие">
+            </label>
+
+            <p class="form__error" id="form-error" role="alert"></p>
+            <button type="submit" class="btn btn--primary btn--full">Записаться</button>
+            <p class="form__policy">Нажимая кнопку, вы соглашаетесь на&nbsp;обработку персональных данных.</p>
+          </form>
+
+          <div class="form__success" id="form-success" hidden>
+            <div class="form__success-icon">✓</div>
+            <p><b>Спасибо!</b> Мы свяжемся с&nbsp;вами.</p>
+          </div>
+        </div>
+
+        <div class="contacts__info reveal">
+          <h3 class="contacts__title">Как нас найти</h3>
+          <p>ул. Липовая, 3 — 2&nbsp;этаж, вход со&nbsp;двора</p>
+          <p>Пн–Пт 7:30–22:00 · Сб–Вс 9:00–20:00</p>
+          <p class="contacts__hint">Коврики, блоки и&nbsp;пледы выдаём. Душ и&nbsp;раздевалки есть.</p>
+
+          <!-- Кнопки связи. Замените номер и username на реальные -->
+          <div class="messengers">
+            <a href="https://t.me/username" class="messenger messenger--tg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+              Telegram
+            </a>
+            <a href="https://wa.me/79990009900" class="messenger messenger--wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+79990009900" class="messenger messenger--phone">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+              +7 (999) 000-99-00
+            </a>
+          </div>
+
+          <!-- Карта-заглушка. Для реального сайта — iframe Яндекс.Карт -->
+          <img src="img/map.svg" alt="Схема проезда: студия йоги на Липовой, 3" class="contacts__map" width="560" height="300" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">
+        <img src="img/logo.svg" alt="" width="36" height="36">
+        <span class="logo__text">Листва<small>студия йоги</small></span>
+      </a>
+      <nav class="footer__links" aria-label="Контакты">
+        <a href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79990009900" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+79990009900">+7 (999) 000-99-00</a>
+      </nav>
+      <p class="footer__demo">Демо-проект. Компания вымышленная.</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка связи (только на мобильных) -->
+  <a href="https://t.me/username" class="float-btn" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

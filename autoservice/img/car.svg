@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360">
+  <!-- Схема автомобиля сбоку с отметками узлов (как на «чертеже») -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#D5D9E0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Фон-чертёж -->
+  <rect width="560" height="360" rx="8" fill="#FFFFFF"/>
+  <rect width="560" height="360" rx="8" fill="url(#grid)" opacity=".7"/>
+
+  <!-- Тень -->
+  <ellipse cx="280" cy="284" rx="230" ry="10" fill="#1C1F24" opacity=".12"/>
+
+  <!-- Кузов -->
+  <path d="M56 236 L64 196 Q70 180 92 176 L168 166 L222 120 Q232 112 248 112 L364 112 Q380 112 392 122 L446 168 L494 176 Q512 180 514 198 L516 236 Q516 246 506 246 L470 246 A44 44 0 0 0 386 246 L190 246 A44 44 0 0 0 106 246 L66 246 Q56 246 56 236 Z"
+        fill="#2A2E35"/>
+  <!-- Стёкла -->
+  <path d="M184 166 L232 126 Q238 122 248 122 L300 122 L300 166 Z" fill="#9FB6CC"/>
+  <path d="M312 122 L360 122 Q372 122 380 130 L424 166 L312 166 Z" fill="#9FB6CC"/>
+  <!-- Линии дверей и ручки -->
+  <path d="M306 122 V240 M200 170 V240 M420 170 V240" stroke="#1C1F24" stroke-width="2"/>
+  <path d="M276 184h18M392 184h18" stroke="#8A8F98" stroke-width="4" stroke-linecap="round"/>
+  <!-- Фары -->
+  <path d="M496 192 h14 v14 h-18 z" fill="#F5C518"/>
+  <path d="M60 200 h12 v12 h-16 z" fill="#D64545"/>
+  <!-- Оранжевая полоса -->
+  <path d="M70 222 H506" stroke="#F26B1D" stroke-width="5"/>
+
+  <!-- Колёса -->
+  <g>
+    <circle cx="148" cy="250" r="36" fill="#1C1F24"/>
+    <circle cx="148" cy="250" r="18" fill="#8A8F98"/>
+    <circle cx="148" cy="250" r="6" fill="#1C1F24"/>
+    <circle cx="428" cy="250" r="36" fill="#1C1F24"/>
+    <circle cx="428" cy="250" r="18" fill="#8A8F98"/>
+    <circle cx="428" cy="250" r="6" fill="#1C1F24"/>
+  </g>
+
+  <!-- Отметки узлов: точка + линия-выноска + подпись -->
+  <g font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#1C1F24">
+    <!-- Двигатель -->
+    <circle cx="470" cy="190" r="7" fill="#F26B1D" stroke="#fff" stroke-width="3"/>
+    <path d="M470 183 V60 H500" fill="none" stroke="#1C1F24" stroke-width="1.5"/>
+    <text x="440" y="52">ДВИГАТЕЛЬ</text>
+
+    <!-- Тормоза -->
+    <circle cx="428" cy="250" r="7" fill="#F26B1D" stroke="#fff" stroke-width="3"/>
+    <path d="M435 254 L470 320 H520" fill="none" stroke="#1C1F24" stroke-width="1.5"/>
+    <text x="456" y="340">ТОРМОЗА</text>
+
+    <!-- Подвеска -->
+    <circle cx="148" cy="222" r="7" fill="#F26B1D" stroke="#fff" stroke-width="3"/>
+    <path d="M141 222 L90 150 H40" fill="none" stroke="#1C1F24" stroke-width="1.5"/>
+    <text x="30" y="142">ПОДВЕСКА</text>
+
+    <!-- Электрика -->
+    <circle cx="300" cy="140" r="7" fill="#F26B1D" stroke="#fff" stroke-width="3"/>
+    <path d="M300 133 V60 H330" fill="none" stroke="#1C1F24" stroke-width="1.5"/>
+    <text x="250" y="52">ЭЛЕКТРИКА</text>
+  </g>
+</svg>

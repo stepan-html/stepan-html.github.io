@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Логотип и фавиконка: медная турка в круге -->
+  <circle cx="32" cy="32" r="31" fill="#3B2A20"/>
+  <path d="M20 24h22l-2 22a4 4 0 0 1-4 3.6H26a4 4 0 0 1-4-3.6z" fill="#C8874B"/>
+  <path d="M18 24h26" stroke="#E9C9A3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 30h10" stroke="#C8874B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M27 18c0-3 3-3 3-6M34 18c0-3 3-3 3-6" fill="none" stroke="#F6EFE6" stroke-width="2" stroke-linecap="round"/>
+</svg>

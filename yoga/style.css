@@ -1,0 +1,477 @@
+/* =========================================================
+   Студия йоги «Листва» — стили
+   Структура: переменные → база → общие элементы → блоки по порядку → адаптив
+   ========================================================= */
+
+/* ---------- Переменные ---------- */
+:root {
+  --milk: #FAF7F2;          /* основной фон */
+  --soft: #F2EEE6;          /* фон чередующихся секций */
+  --white: #FFFFFF;
+  --text: #3D3A36;          /* основной текст */
+  --muted: #8A847B;         /* второстепенный текст */
+  --sage: #8FA98F;          /* шалфейный */
+  --sage-dark: #6F8C70;
+  --sage-light: #E3ECE1;
+  --peach: #E8B4A0;         /* персиковый */
+  --peach-light: #F7E3DA;
+  --sand: #E9DCC4;
+  --danger: #C8655A;
+
+  --font-head: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Nunito", "Segoe UI", Arial, sans-serif;
+
+  --radius: 28px;           /* мягкие, крупные скругления */
+  --shadow: 0 14px 40px rgba(61, 58, 54, .06);
+  --header-h: 76px;
+}
+
+/* ---------- База ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;              /* плавная прокрутка */
+  scroll-padding-top: var(--header-h);  /* учёт липкой шапки */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--milk);
+  overflow-x: clip;          /* пятна на фоне не создают горизонтальную прокрутку */
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-family: var(--font-head); font-weight: 500; line-height: 1.1; }
+p { margin: 0 0 1em; }
+
+.container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  font: 600 16px/1.2 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .3s, color .3s, border-color .3s;
+}
+.btn--primary { background: var(--sage); color: var(--white); }
+.btn--primary:hover { background: var(--sage-dark); }
+.btn--ghost { border-color: var(--text); color: var(--text); background: transparent; }
+.btn--ghost:hover { background: var(--text); color: var(--milk); }
+.btn--full { width: 100%; }
+
+/* ---------- Секции ---------- */
+.section { padding: 110px 0; }
+.section--soft { background: var(--soft); }
+
+.section__label {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+}
+.section__title { margin-bottom: 48px; font-size: clamp(36px, 5vw, 58px); }
+
+/* Появление при прокрутке — медленнее и мягче, чем на других сайтах */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Логотип ---------- */
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo__text { display: flex; flex-direction: column; font: 600 26px/1 var(--font-head); }
+.logo__text small { margin-top: 2px; font: 400 12px var(--font-body); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+
+/* =========================================================
+   ШАПКА
+   ========================================================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, .85);
+  backdrop-filter: blur(12px);
+  transition: box-shadow .3s;
+}
+.header.is-scrolled { box-shadow: 0 1px 0 rgba(61, 58, 54, .08); }
+.header__inner { display: flex; align-items: center; gap: 32px; height: var(--header-h); }
+
+.nav { display: flex; gap: 30px; margin-left: auto; }
+.nav__link { font-size: 15px; text-decoration: none; transition: color .2s; }
+.nav__link:hover { color: var(--sage-dark); }
+.nav__cta-mobile { display: none; }
+.header__cta { padding: 11px 24px; font-size: 15px; }
+
+/* Бургер из двух линий — чуть легче, под стиль */
+.burger { display: none; width: 44px; height: 44px; margin-left: auto; padding: 12px 10px; border: 0; background: none; cursor: pointer; }
+.burger span { display: block; height: 1.5px; margin: 6px 0; background: var(--text); transition: transform .3s; }
+.burger.is-open span:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
+.burger.is-open span:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
+
+/* =========================================================
+   1. ПЕРВЫЙ ЭКРАН
+   ========================================================= */
+/* overflow не обрезаем, иначе у размытых пятен видна жёсткая граница;
+   горизонтальную прокрутку убирает overflow-x: clip у body */
+.hero { position: relative; padding: 48px 0 100px; }
+
+/* Мягкие размытые пятна на фоне */
+.blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; z-index: 0; pointer-events: none; }
+.blob--1 { width: 460px; height: 460px; top: -120px; right: 8%; background: var(--peach-light); }
+.blob--2 { width: 380px; height: 380px; bottom: -160px; left: -80px; background: var(--sage-light); }
+
+.hero__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.hero__label { font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.hero__title { margin: 10px 0 24px; font-size: clamp(46px, 6.6vw, 86px); }
+.hero__title em { color: var(--sage-dark); }
+.hero__text { max-width: 480px; color: var(--muted); font-size: 18px; }
+.hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+
+.hero__visual { position: relative; justify-self: center; width: 100%; max-width: 400px; }
+/* Арка: полукруг сверху */
+.arch {
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px var(--radius) var(--radius);
+  background: linear-gradient(170deg, var(--peach-light), var(--sand) 60%, #DCCDB0);
+  overflow: hidden;
+  animation: float 7s ease-in-out infinite;
+}
+.arch img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+
+.hero__badge {
+  position: absolute;
+  left: -36px; bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 22px;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  line-height: 1.2;
+}
+.hero__badge b { font: 600 34px var(--font-head); color: var(--sage-dark); }
+.hero__badge span { font-size: 13px; color: var(--muted); }
+
+/* =========================================================
+   2. НАПРАВЛЕНИЯ
+   ========================================================= */
+.directions__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.direction {
+  padding: 36px 28px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform .4s;
+}
+.direction:hover { transform: translateY(-6px); }
+.direction__icon { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 22px; border-radius: 50%; }
+.direction__icon svg { width: 34px; height: 34px; }
+.direction__icon--sage { background: var(--sage-light); color: var(--sage-dark); }
+.direction__icon--peach { background: var(--peach-light); color: #B9765E; }
+.direction__icon--sand { background: #F3EBDC; color: #A08A60; }
+.direction h3 { margin-bottom: 10px; font-size: 28px; }
+.direction p { color: var(--muted); font-size: 15px; }
+.direction__level { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px !important; }
+
+/* Индикатор уровня: точки */
+.lvl { display: inline-flex; gap: 4px; }
+.lvl::before, .lvl::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--sand); }
+.lvl--1::before { background: var(--sage); }
+.lvl--2::before, .lvl--2::after { background: var(--peach); }
+
+/* =========================================================
+   3. РАСПИСАНИЕ
+   ========================================================= */
+.schedule__controls { display: grid; gap: 18px; margin-bottom: 32px; }
+
+.days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.days::-webkit-scrollbar { display: none; }
+.day {
+  flex: 1 0 auto;
+  min-width: 78px;
+  padding: 12px 10px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--white);
+  color: var(--text);
+  font: 600 15px var(--font-body);
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background .25s, color .25s;
+}
+.day small { display: block; margin-top: 2px; font-weight: 400; font-size: 12px; color: var(--muted); }
+.day.is-active { background: var(--text); color: var(--milk); }
+.day.is-active small { color: #C9C3B9; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter {
+  padding: 8px 18px;
+  border: 1.5px solid #DAD3C7;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: 400 14px var(--font-body);
+  cursor: pointer;
+  transition: all .25s;
+}
+.filter.is-active { border-color: var(--sage); background: var(--sage); color: var(--white); }
+
+.lessons { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; min-height: 120px; }
+.lesson {
+  display: grid;
+  grid-template-columns: 110px 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 26px;
+  border-radius: 22px;
+  background: var(--white);
+  animation: lessonIn .5s ease both;
+}
+@keyframes lessonIn { from { opacity: 0; transform: translateY(10px); } }
+.lesson__time { font: 600 26px var(--font-head); }
+.lesson__time small { display: block; font: 400 13px var(--font-body); color: var(--muted); }
+.lesson__name { font-weight: 700; }
+.lesson__teacher { font-size: 14px; color: var(--muted); }
+.lesson__tag { padding: 4px 12px; border-radius: 999px; font-size: 13px; white-space: nowrap; }
+.lesson__tag--Хатха, .lesson__tag--Медитация { background: var(--sage-light); color: var(--sage-dark); }
+.lesson__tag--Виньяса { background: var(--peach-light); color: #A9654C; }
+.lesson__tag--Дляспины { background: #F3EBDC; color: #8D7750; }
+.lesson__btn { padding: 10px 20px; font-size: 14px; }
+.lessons__empty { padding: 40px; border-radius: 22px; background: var(--white); text-align: center; color: var(--muted); }
+
+/* =========================================================
+   4. АБОНЕМЕНТЫ
+   ========================================================= */
+.prices__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+.price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 26px 28px;
+  border: 1.5px solid #E6DFD3;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.price--popular { border-color: var(--sage); background: linear-gradient(180deg, var(--sage-light), var(--white) 60%); }
+.price__badge {
+  position: absolute;
+  top: -14px; left: 26px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+}
+.price h3 { font-size: 30px; margin-bottom: 8px; }
+.price__value { margin: 0 0 10px; font: 600 42px/1 var(--font-head); color: var(--sage-dark); }
+.price__desc { flex: 1; color: var(--muted); font-size: 15px; }
+
+/* =========================================================
+   5. ПРЕПОДАВАТЕЛИ И ОТЗЫВЫ
+   ========================================================= */
+.team__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 80px; }
+.teacher { text-align: center; }
+/* «Фото» — арка-заглушка с инициалом. Для реального сайта — <img> */
+.teacher__photo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 4;
+  max-width: 260px;
+  margin: 0 auto 18px;
+  border-radius: 999px 999px 24px 24px;
+  font: 500 96px var(--font-head);
+  color: rgba(255, 255, 255, .85);
+}
+.teacher__photo--1 { background: linear-gradient(170deg, #C9D8C6, var(--sage)); }
+.teacher__photo--2 { background: linear-gradient(170deg, var(--peach-light), var(--peach)); }
+.teacher__photo--3 { background: linear-gradient(170deg, #F0E6D4, #D8C6A4); }
+.teacher h3 { font-size: 30px; }
+.teacher p { color: var(--muted); font-size: 15px; }
+
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review {
+  margin: 0;
+  padding: 32px 30px;
+  border-radius: var(--radius);
+  background: var(--white);
+  font: italic 500 21px/1.45 var(--font-head);
+}
+.review footer { margin-top: 12px; font: 400 14px var(--font-body); color: var(--muted); }
+
+/* =========================================================
+   6. ЗАПИСЬ И КОНТАКТЫ
+   ========================================================= */
+.contacts__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.signup .section__title { margin-bottom: 16px; }
+.signup__text { color: var(--muted); }
+
+.form { display: grid; gap: 16px; margin-top: 28px; }
+.form__field { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.form__field input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1.5px solid #E6DFD3;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--text);
+  font: 400 16px var(--font-body);   /* 16px — без автозума на iPhone */
+  outline: none;
+  transition: border-color .25s;
+}
+.form__field input:focus { border-color: var(--sage); }
+.form__field .is-invalid { border-color: var(--danger); }
+.form__field .is-filled { animation: glow 1.4s ease; }
+@keyframes glow { 0% { background: var(--sage-light); } 100% { background: var(--white); } }
+.form__error { min-height: 1em; margin: 0; color: var(--danger); font-size: 14px; }
+.form__policy { margin: 0; font-size: 12px; color: var(--muted); text-align: center; }
+
+.form__success { margin-top: 28px; padding: 40px; border-radius: var(--radius); background: var(--sage-light); text-align: center; font-size: 20px; }
+.form__success-icon {
+  display: grid;
+  place-items: center;
+  width: 72px; height: 72px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--white);
+  font-size: 32px;
+}
+
+.contacts__info { padding: 40px; border-radius: var(--radius); background: var(--soft); }
+.contacts__title { font-size: 34px; margin-bottom: 16px; }
+.contacts__hint { color: var(--muted); font-size: 15px; }
+
+.messengers { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 24px; }
+.messenger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: filter .2s;
+}
+.messenger:hover { filter: brightness(1.06); }
+.messenger--tg { background: #2AABEE; }
+.messenger--wa { background: #25D366; }
+.messenger--phone { background: var(--text); }
+.contacts__map { width: 100%; height: auto; border-radius: 20px; }
+
+/* =========================================================
+   ПОДВАЛ
+   ========================================================= */
+.footer { padding: 44px 0 28px; background: var(--soft); }
+.footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 24px; }
+.footer__links a { text-decoration: none; color: var(--muted); }
+.footer__links a:hover { color: var(--sage-dark); }
+.footer__demo {
+  width: 100%;
+  margin: 8px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #E3DCCF;
+  font-size: 12px;
+  color: #ADA69B;
+  text-align: center;
+}
+
+.float-btn {
+  position: fixed;
+  right: 16px; bottom: 16px;
+  z-index: 90;
+  display: none;
+  place-items: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--white);
+  box-shadow: 0 10px 26px rgba(61, 58, 54, .2);
+}
+
+/* =========================================================
+   АДАПТИВ
+   ========================================================= */
+@media (max-width: 1024px) {
+  .header__cta { display: none; }
+  .directions__grid, .prices__grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews { grid-template-columns: 1fr; max-width: 640px; }
+  .lesson { grid-template-columns: 90px 1fr auto; }
+  .lesson__tag { display: none; }
+}
+
+@media (max-width: 900px) {
+  .burger { display: block; }
+  .nav {
+    position: fixed;
+    top: var(--header-h); left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 28px;
+    background: var(--milk);
+    box-shadow: 0 30px 40px rgba(61, 58, 54, .08);
+    transform: translateY(-120%);
+    visibility: hidden;
+    transition: transform .4s ease, visibility .4s;
+  }
+  .nav.is-open { transform: none; visibility: visible; }
+  .nav__link { padding: 14px 0; border-bottom: 1px solid #E8E1D5; font-size: 18px; }
+  .nav__cta-mobile { display: flex; margin-top: 20px; }
+
+  .hero__inner, .contacts__inner { grid-template-columns: 1fr; }
+  .hero__visual { max-width: 320px; margin-top: 12px; }
+  .team__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .float-btn { display: grid; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .section { padding: 72px 0; }
+  .container { padding: 0 16px; }
+  .section__title { margin-bottom: 32px; }
+
+  .hero { padding: 28px 0 72px; }
+  .hero__text { font-size: 16px; }
+  .hero__buttons .btn { width: 100%; }
+  .hero__visual { max-width: 260px; }
+  .hero__badge { left: -20px; bottom: 30px; padding: 10px 16px; }
+  .hero__badge b { font-size: 28px; }
+
+  .directions__grid, .prices__grid { grid-template-columns: 1fr; }
+  .direction { padding: 28px 22px; }
+  .prices__grid { gap: 26px; }
+
+  .lesson { grid-template-columns: auto 1fr; gap: 6px 16px; padding: 18px; }
+  .lesson__time { grid-row: 1 / 3; font-size: 24px; }
+  .lesson__btn { grid-column: 1 / -1; margin-top: 8px; }
+
+  .team__grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 56px; }
+  .teacher__photo { max-width: 220px; }
+  .review { padding: 26px 22px; font-size: 19px; }
+  .contacts__info { padding: 26px 20px; }
+  .messenger { flex: 1 1 auto; justify-content: center; }
+
+  .footer__inner { flex-direction: column; text-align: center; }
+  .footer__links { justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}

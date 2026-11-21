@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Базовое SEO ===== -->
+  <title>Автосервис «Кардан» — ремонт и ТО автомобилей, калькулятор цен</title>
+  <meta name="description" content="Автосервис «Кардан» на Промышленной, 24: ТО, тормоза, подвеска, диагностика, шиномонтаж. Цена фиксируется до начала работ, гарантия 12 месяцев. Рассчитайте стоимость онлайн.">
+
+  <!-- ===== Open Graph ===== -->
+  <!-- Для реального сайта: og:image — полный адрес (https://ваш-домен/img/og.png) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Автосервис «Кардан» — ремонт с ценой до начала работ">
+  <meta property="og:description" content="ТО, тормоза, подвеска, диагностика. Онлайн-калькулятор и запись.">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!-- Шрифты: Exo 2 (заголовки) + Roboto (текст), оба с кириллицей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Верхняя информационная полоска -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Ежедневно 9:00–21:00</span>
+      <span>ул. Промышленная, 24</span>
+      <a href="tel:+79990007788">+7 (999) 000-77-88</a>
+    </div>
+  </div>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="На главную">
+        <img src="img/logo.svg" alt="" width="42" height="42">
+        <span class="logo__text">КАРДАН<small>автосервис</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#calc" class="nav__link">Калькулятор</a>
+        <a href="#about" class="nav__link">О нас</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="#booking" class="btn btn--accent nav__cta-mobile">Записаться</a>
+      </nav>
+
+      <a href="#booking" class="btn btn--accent header__cta">Записаться</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== 1. ПЕРВЫЙ ЭКРАН ===================== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__label"><span class="hero__dot"></span>Свободные окна на сегодня</p>
+          <h1 class="hero__title">Ремонт и&nbsp;обслуживание авто — <span>с&nbsp;ценой до&nbsp;начала работ</span></h1>
+          <p class="hero__text">Сначала диагностика и&nbsp;заказ-наряд с&nbsp;точной суммой, потом ремонт. Никаких «а ещё нашли вот это» без вашего согласия.</p>
+
+          <div class="hero__buttons">
+            <a href="#calc" class="btn btn--accent">Рассчитать стоимость</a>
+            <a href="#booking" class="btn btn--dark">Записаться</a>
+          </div>
+
+          <ul class="guarantees">
+            <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Фиксируем цену в&nbsp;заказ-наряде</li>
+            <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Гарантия 12&nbsp;месяцев</li>
+            <li><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Отдаём снятые запчасти</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <img src="img/car.svg" alt="" width="560" height="360">
+        </div>
+      </div>
+      <div class="hazard" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===================== 2. УСЛУГИ ===================== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">01 / Услуги</p>
+          <h2 class="section__title">Что делаем</h2>
+        </div>
+
+        <div class="services__grid">
+          <article class="service reveal">
+            <div class="service__icon"><svg viewBox="0 0 48 48"><path d="M24 6c6 10 10 15 10 21a10 10 0 0 1-20 0c0-6 4-11 10-21z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div>
+            <h3>ТО и замена масла</h3>
+            <p>Масло, фильтры, жидкости. Сверяем с&nbsp;регламентом производителя.</p>
+            <p class="service__price">от 1 200 ₽</p>
+          </article>
+          <article class="service reveal">
+            <div class="service__icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 14a18 18 0 0 1 10-7" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></div>
+            <h3>Тормозная система</h3>
+            <p>Колодки, диски, суппорты, прокачка тормозной жидкости.</p>
+            <p class="service__price">от 1 500 ₽</p>
+          </article>
+          <article class="service reveal">
+            <div class="service__icon"><svg viewBox="0 0 48 48"><path d="M24 4v6M24 38v6M18 10h12l-2 4 4 4-4 4 4 4-4 4 2 4H18" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+            <h3>Подвеска</h3>
+            <p>Амортизаторы, рычаги, стойки стабилизатора, сайлентблоки.</p>
+            <p class="service__price">от 1 800 ₽</p>
+          </article>
+          <article class="service reveal">
+            <div class="service__icon"><svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 26l6-8 6 5 6-9 6 7M18 40h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Диагностика</h3>
+            <p>Компьютерная диагностика, расшифровка ошибок, осмотр на&nbsp;подъёмнике.</p>
+            <p class="service__price">от 1 000 ₽</p>
+          </article>
+          <article class="service reveal">
+            <div class="service__icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 6v10M24 32v10M6 24h10M32 24h10" stroke="currentColor" stroke-width="3"/></svg></div>
+            <h3>Шиномонтаж</h3>
+            <p>Сезонная замена, балансировка, ремонт проколов, хранение шин.</p>
+            <p class="service__price">от 2 000 ₽</p>
+          </article>
+          <article class="service reveal">
+            <div class="service__icon"><svg viewBox="0 0 48 48"><path d="M27 4 12 27h11l-3 17 16-24H25z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div>
+            <h3>Автоэлектрика</h3>
+            <p>Генератор, стартер, проводка, свет, установка сигнализаций.</p>
+            <p class="service__price">от 900 ₽</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. КАЛЬКУЛЯТОР ===================== -->
+    <!-- Цены работ: data-price (для легкового авто). Коэффициенты классов — в script.js -->
+    <section class="calc section section--dark" id="calc">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">02 / Калькулятор</p>
+          <h2 class="section__title">Рассчитайте стоимость</h2>
+          <p class="section__text">Отметьте нужные работы — сумма посчитается сразу. Это предварительная цена без учёта запчастей, точную зафиксируем после осмотра.</p>
+        </div>
+
+        <div class="calc__inner">
+          <form class="calc__form" id="calc-form">
+            <fieldset class="calc__group">
+              <legend>1. Класс автомобиля</legend>
+              <div class="car-types">
+                <label class="car-type"><input type="radio" name="car" value="1" checked><span><b>Легковой</b><small>седан, хэтчбек</small></span></label>
+                <label class="car-type"><input type="radio" name="car" value="1.2"><span><b>Кроссовер</b><small>+20%</small></span></label>
+                <label class="car-type"><input type="radio" name="car" value="1.4"><span><b>Внедорожник</b><small>+40%</small></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="calc__group">
+              <legend>2. Работы</legend>
+              <div class="works">
+                <label class="work"><input type="checkbox" name="work" data-price="1200" value="Замена масла и фильтра"><span>Замена масла и&nbsp;фильтра</span><b>1 200 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="1000" value="Компьютерная диагностика"><span>Компьютерная диагностика</span><b>1 000 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="1500" value="Замена тормозных колодок (ось)"><span>Замена тормозных колодок (ось)</span><b>1 500 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="600" value="Замена воздушного и салонного фильтров"><span>Воздушный и&nbsp;салонный фильтры</span><b>600 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="1800" value="Развал-схождение"><span>Развал-схождение</span><b>1 800 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="2000" value="Шиномонтаж 4 колёс"><span>Шиномонтаж 4 колёс</span><b>2 000 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="900" value="Замена свечей зажигания"><span>Замена свечей зажигания</span><b>900 ₽</b></label>
+                <label class="work"><input type="checkbox" name="work" data-price="3500" value="Замена амортизаторов (пара)"><span>Замена амортизаторов (пара)</span><b>3 500 ₽</b></label>
+              </div>
+            </fieldset>
+          </form>
+
+          <!-- Итог (обновляется в script.js) -->
+          <aside class="calc__total" aria-live="polite">
+            <p class="calc__total-label">Предварительно</p>
+            <p class="calc__sum"><span id="calc-sum">0</span> ₽</p>
+            <p class="calc__count" id="calc-count">Выберите работы слева</p>
+            <ul class="calc__selected" id="calc-selected"></ul>
+            <button type="button" class="btn btn--accent btn--full" id="calc-book" disabled>Записаться с этим расчётом</button>
+            <p class="calc__note">Запчасти — по&nbsp;факту, можно привезти свои.</p>
+          </aside>
+        </div>
+
+        <!-- Полный прайс: <details> раскрывается без JavaScript -->
+        <details class="pricelist">
+          <summary>Полный прайс-лист</summary>
+          <div class="pricelist__grid">
+            <table>
+              <caption>ТО и двигатель</caption>
+              <tr><td>Замена масла ДВС</td><td>1 200 ₽</td></tr>
+              <tr><td>Замена масла в АКПП (частичная)</td><td>2 500 ₽</td></tr>
+              <tr><td>Замена ремня ГРМ</td><td>от 5 500 ₽</td></tr>
+              <tr><td>Замена антифриза</td><td>1 500 ₽</td></tr>
+            </table>
+            <table>
+              <caption>Тормоза и подвеска</caption>
+              <tr><td>Колодки (ось)</td><td>1 500 ₽</td></tr>
+              <tr><td>Диски + колодки (ось)</td><td>3 000 ₽</td></tr>
+              <tr><td>Стойка стабилизатора</td><td>800 ₽</td></tr>
+              <tr><td>Рычаг передней подвески</td><td>от 1 800 ₽</td></tr>
+            </table>
+            <table>
+              <caption>Шины и прочее</caption>
+              <tr><td>Шиномонтаж R13–R16</td><td>2 000 ₽</td></tr>
+              <tr><td>Шиномонтаж R17–R20</td><td>2 800 ₽</td></tr>
+              <tr><td>Хранение шин (сезон)</td><td>2 500 ₽</td></tr>
+              <tr><td>Заправка кондиционера</td><td>2 200 ₽</td></tr>
+            </table>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===================== 4. ПОЧЕМУ МЫ ===================== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">03 / О нас</p>
+          <h2 class="section__title">Почему к нам возвращаются</h2>
+        </div>
+
+        <ul class="numbers reveal">
+          <li><b>с 2014</b><span>работаем на&nbsp;Промышленной</span></li>
+          <li><b>4</b><span>подъёмника, без очередей</span></li>
+          <li><b>12 мес.</b><span>гарантия на&nbsp;работы</span></li>
+          <li><b>4.9 ★</b><span>средняя оценка клиентов</span></li>
+        </ul>
+
+        <ol class="process reveal">
+          <li><span>1</span><h3>Запись</h3><p>Онлайн или по&nbsp;телефону, на&nbsp;удобное время.</p></li>
+          <li><span>2</span><h3>Диагностика</h3><p>Осматриваем авто при&nbsp;вас, показываем проблему.</p></li>
+          <li><span>3</span><h3>Согласование</h3><p>Заказ-наряд с&nbsp;ценой. Ремонт — только после «да».</p></li>
+          <li><span>4</span><h3>Выдача</h3><p>Отдаём авто, снятые детали и&nbsp;гарантийный талон.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 5. ОТЗЫВЫ ===================== -->
+    <section class="reviews section section--gray" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">04 / Отзывы</p>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </div>
+
+        <div class="reviews__grid">
+          <article class="review reveal">
+            <header><b>Игорь</b><span class="review__stars" aria-label="5 из 5">★★★★★</span></header>
+            <p class="review__car">Седан, 2017 · колодки и диски</p>
+            <p>«Назвали цену по телефону — ровно столько и заплатил. Старые диски отдали в пакете, показали износ».</p>
+          </article>
+          <article class="review reveal">
+            <header><b>Наталья</b><span class="review__stars" aria-label="5 из 5">★★★★★</span></header>
+            <p class="review__car">Кроссовер, 2020 · ТО-3</p>
+            <p>«Пока ждала, выпила кофе в зоне отдыха. Через полтора часа машина готова, в чек-листе всё по пунктам».</p>
+          </article>
+          <article class="review reveal">
+            <header><b>Руслан</b><span class="review__stars" aria-label="5 из 5">★★★★☆</span></header>
+            <p class="review__car">Внедорожник, 2012 · подвеска</p>
+            <p>«Нашли стук, который два других сервиса не нашли. Немного подождал запчасть, зато сделали на совесть».</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. ЗАПИСЬ И КОНТАКТЫ ===================== -->
+    <section class="contacts section" id="contacts">
+      <div class="container contacts__inner">
+
+        <div class="booking reveal" id="booking">
+          <p class="section__label">05 / Запись</p>
+          <h2 class="section__title">Записаться на&nbsp;ремонт</h2>
+
+          <form class="form" id="booking-form" novalidate>
+            <div class="form__row">
+              <label class="form__field">
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+              </label>
+              <label class="form__field">
+                <span>Телефон</span>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" inputmode="tel">
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="form__field">
+                <span>Марка и модель</span>
+                <input type="text" name="car" placeholder="Например, седан 2017 г." required>
+              </label>
+              <label class="form__field">
+                <span>Дата</span>
+                <input type="date" name="date" id="booking-date" required>
+              </label>
+            </div>
+            <label class="form__field">
+              <span>Какие работы нужны</span>
+              <!-- Сюда кнопка калькулятора подставляет выбранные работы и сумму -->
+              <textarea name="works" id="booking-works" rows="3" placeholder="Опишите проблему или выберите работы в калькуляторе"></textarea>
+            </label>
+
+            <p class="form__error" id="form-error" role="alert"></p>
+            <button type="submit" class="btn btn--accent btn--full">Отправить заявку</button>
+            <p class="form__policy">Нажимая кнопку, вы соглашаетесь на&nbsp;обработку персональных данных.</p>
+          </form>
+
+          <div class="form__success" id="form-success" hidden>
+            <div class="form__success-icon">✓</div>
+            <p><b>Спасибо!</b> Мы свяжемся с&nbsp;вами.</p>
+          </div>
+        </div>
+
+        <div class="contacts__info reveal">
+          <h3 class="contacts__title">Контакты</h3>
+          <p class="status" id="open-status">Проверяем часы работы…</p>
+          <dl class="contacts__list">
+            <dt>Адрес</dt><dd>ул. Промышленная, 24, въезд с&nbsp;торца здания</dd>
+            <dt>Часы</dt><dd>Ежедневно 9:00–21:00</dd>
+            <dt>Телефон</dt><dd><a href="tel:+79990007788">+7 (999) 000-77-88</a></dd>
+          </dl>
+
+          <!-- Кнопки связи. Замените номер и username на реальные -->
+          <div class="messengers">
+            <a href="https://t.me/username" class="messenger messenger--tg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+              Telegram
+            </a>
+            <a href="https://wa.me/79990007788" class="messenger messenger--wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+79990007788" class="messenger messenger--phone">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+              Позвонить
+            </a>
+          </div>
+
+          <!-- Карта-заглушка. Для реального сайта — iframe Яндекс.Карт -->
+          <img src="img/map.svg" alt="Схема проезда: автосервис на Промышленной, 24" class="contacts__map" width="560" height="300" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo logo--light">
+        <img src="img/logo.svg" alt="" width="36" height="36">
+        <span class="logo__text">КАРДАН<small>автосервис</small></span>
+      </a>
+      <nav class="footer__links" aria-label="Контакты">
+        <a href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79990007788" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+79990007788">+7 (999) 000-77-88</a>
+      </nav>
+      <p class="footer__demo">Демо-проект. Компания вымышленная.</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка звонка (только на мобильных) -->
+  <a href="tel:+79990007788" class="float-btn" aria-label="Позвонить">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

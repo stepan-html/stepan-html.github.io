@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300">
+  <!-- Мягкая карта-заглушка (адрес вымышленный) -->
+  <rect width="560" height="300" fill="#F2EEE6"/>
+
+  <!-- Парк -->
+  <path d="M330 10 H550 V130 H330 Z" fill="#E3ECE1"/>
+  <g fill="#C9D8C6"><circle cx="370" cy="50" r="16"/><circle cx="430" cy="86" r="20"/><circle cx="500" cy="46" r="14"/><circle cx="480" cy="100" r="12"/></g>
+  <text x="440" y="124" font-family="Arial, sans-serif" font-size="12" fill="#6F8C70" text-anchor="middle">Липовый сквер</text>
+
+  <!-- Кварталы -->
+  <g fill="#E9E2D6">
+    <rect x="10" y="10" width="150" height="120" rx="14"/>
+    <rect x="180" y="10" width="130" height="120" rx="14"/>
+    <rect x="10" y="176" width="150" height="114" rx="14"/>
+    <rect x="330" y="176" width="220" height="114" rx="14"/>
+  </g>
+  <!-- Улица -->
+  <rect x="0" y="140" width="560" height="28" fill="#FFFFFF"/>
+  <rect x="166" y="0" width="8" height="300" fill="#FFFFFF"/>
+  <rect x="316" y="0" width="8" height="300" fill="#FFFFFF"/>
+  <text x="20" y="159" font-family="Arial, sans-serif" font-size="12" fill="#8A847B">ул. Липовая</text>
+
+  <!-- Студия -->
+  <rect x="180" y="176" width="130" height="114" rx="14" fill="#F7E3DA"/>
+  <g transform="translate(245 190)">
+    <path d="M0 44c-16-20-24-32-24-44a24 24 0 0 1 48 0c0 12-8 24-24 44z" fill="#8FA98F"/>
+    <circle cx="0" cy="0" r="9" fill="#FAF7F2"/>
+  </g>
+  <text x="245" y="272" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3D3A36" text-anchor="middle">Липовая, 3</text>
+</svg>

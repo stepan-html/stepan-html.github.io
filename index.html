@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Портфолио лендингов — HTML/CSS/JS</title>
+  <meta name="description" content="Примеры одностраничных сайтов на чистом HTML/CSS/JS: кофейня, барбершоп, репетитор, автосервис, студия йоги. Адаптивная вёрстка, формы заявок, калькуляторы.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Портфолио лендингов — HTML/CSS/JS">
+  <meta property="og:description" content="5 демо-сайтов: адаптив, формы заявок, калькулятор, расписание.">
+  <meta property="og:image" content="coffee/img/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Главная страница-витрина: ссылки на все демо. Стили прямо здесь, чтобы был один файл -->
+  <style>
+    :root { --bg: #F6F7F9; --card: #fff; --text: #16181D; --muted: #667085; --accent: #2563EB; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Inter", "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 56px 20px 40px; }
+    h1 { margin: 0 0 12px; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.15; }
+    .lead { max-width: 640px; margin: 0 0 12px; color: var(--muted); font-size: 18px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 44px; padding: 0; list-style: none; }
+    .tags li { padding: 6px 14px; border-radius: 999px; background: var(--card); border: 1px solid #E4E7EC; font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+    .card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background: var(--card); color: inherit; text-decoration: none; box-shadow: 0 6px 24px rgba(16, 24, 40, .06); transition: transform .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(16, 24, 40, .12); }
+    .card img { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; object-position: top; display: block; border-bottom: 1px solid #EEF0F3; }
+    .card__body { padding: 18px 20px 22px; }
+    .card h2 { margin: 0 0 6px; font-size: 20px; }
+    .card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+    .card__link { color: var(--accent); font-weight: 500; font-size: 15px; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Лендинги на чистом HTML/CSS/JS</h1>
+    <p class="lead">Пять демо-сайтов для разных видов бизнеса. Откройте любой — и с компьютера, и с телефона.</p>
+    <ul class="tags">
+      <li>Адаптив от 360 px</li>
+      <li>Без конструкторов</li>
+      <li>Формы заявок</li>
+      <li>Кнопки Telegram / WhatsApp</li>
+      <li>SEO и превью для соцсетей</li>
+    </ul>
+
+    <div class="grid">
+      <a class="card" href="coffee/">
+        <img src="coffee/img/og.png" alt="Первый экран лендинга кофейни" loading="lazy">
+        <div class="card__body">
+          <h2>Кофейня</h2>
+          <p>Тёплый стиль, меню с вкладками и ценами, статус «открыто сейчас», бронь столика.</p>
+          <span class="card__link">Открыть сайт →</span>
+        </div>
+      </a>
+      <a class="card" href="barber/">
+        <img src="barber/img/og.png" alt="Первый экран лендинга барбершопа" loading="lazy">
+        <div class="card__body">
+          <h2>Барбершоп</h2>
+          <p>Тёмный брутальный стиль, прайс, карточки мастеров, запись к выбранному мастеру.</p>
+          <span class="card__link">Открыть сайт →</span>
+        </div>
+      </a>
+      <a class="card" href="tutor/">
+        <img src="tutor/img/og.png" alt="Первый экран лендинга репетитора" loading="lazy">
+        <div class="card__body">
+          <h2>Репетитор по математике</h2>
+          <p>Спокойный стиль, переключатель «онлайн / очно» в ценах, результаты учеников, FAQ.</p>
+          <span class="card__link">Открыть сайт →</span>
+        </div>
+      </a>
+      <a class="card" href="autoservice/">
+        <img src="autoservice/img/og.png" alt="Первый экран лендинга автосервиса" loading="lazy">
+        <div class="card__body">
+          <h2>Автосервис</h2>
+          <p>Строгий стиль, калькулятор стоимости работ с переносом расчёта в заявку, прайс-лист.</p>
+          <span class="card__link">Открыть сайт →</span>
+        </div>
+      </a>
+      <a class="card" href="yoga/">
+        <img src="yoga/img/og.png" alt="Первый экран лендинга студии йоги" loading="lazy">
+        <div class="card__body">
+          <h2>Студия йоги</h2>
+          <p>Воздушный стиль, расписание по дням с фильтром направлений, абонементы, запись.</p>
+          <span class="card__link">Открыть сайт →</span>
+        </div>
+      </a>
+    </div>
+
+    <footer>Все проекты — демонстрационные, компании вымышленные.</footer>
+  </main>
+</body>
+</html>

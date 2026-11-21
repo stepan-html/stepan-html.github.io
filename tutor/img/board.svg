@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440">
+  <!-- Иллюстрация «лист тетради»: график параболы, формулы и чертёж силы -->
+  <defs>
+    <pattern id="cells" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#E3EAF4" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#1F2A44"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#D1495B"/>
+    </marker>
+  </defs>
+
+  <!-- Лист -->
+  <rect x="10" y="10" width="500" height="420" rx="18" fill="#fff"/>
+  <rect x="10" y="10" width="500" height="420" rx="18" fill="url(#cells)"/>
+  <path d="M70 10v420" stroke="#F4A7B0" stroke-width="2"/>
+
+  <!-- Оси координат -->
+  <g stroke="#1F2A44" stroke-width="2" fill="none">
+    <path d="M100 250H330" marker-end="url(#arrow)"/>
+    <path d="M150 380V60" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Georgia, serif" font-style="italic" font-size="18" fill="#1F2A44">
+    <text x="318" y="272">x</text>
+    <text x="160" y="70">y</text>
+  </g>
+
+  <!-- Парабола (условно): пересекает ось x в двух точках-корнях -->
+  <path d="M130 90 Q240 430 330 90" fill="none" stroke="#2A9D8F" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="210" cy="250" r="5" fill="#D1495B"/>
+  <circle cx="259" cy="250" r="5" fill="#D1495B"/>
+  <text x="170" y="130" font-family="Georgia, serif" font-style="italic" font-size="18" fill="#21867A">y = x² − 4x + 3</text>
+
+  <!-- Выделение маркером (рисуем до текста, чтобы было «под» формулой) -->
+  <rect x="345" y="180" width="80" height="26" fill="#FFD166" opacity=".6" rx="4"/>
+
+  <!-- Формулы справа -->
+  <g font-family="Georgia, serif" font-style="italic" font-size="19" fill="#1F2A44">
+    <text x="348" y="150">sin²α + cos²α = 1</text>
+    <text x="348" y="198">F = m·a</text>
+    <text x="348" y="244">E = mv²/2</text>
+  </g>
+
+  <!-- Брусок и силы -->
+  <g transform="translate(370 300)">
+    <path d="M-20 70H120" stroke="#1F2A44" stroke-width="2"/>
+    <g stroke="#1F2A44" stroke-width="1.5"><path d="M-10 70l-10 10M10 70 0 80M30 70l-10 10M50 70l-10 10M70 70l-10 10M90 70l-10 10M110 70l-10 10"/></g>
+    <rect x="20" y="30" width="60" height="40" fill="#DDF1EE" stroke="#1F2A44" stroke-width="2"/>
+    <path d="M80 50h50" stroke="#D1495B" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="104" y="40" font-family="Georgia, serif" font-style="italic" font-size="18" fill="#D1495B">F</text>
+  </g>
+</svg>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Базовое SEO ===== -->
+  <title>Репетитор по математике и физике — подготовка к ОГЭ и ЕГЭ | Андрей Викторович</title>
+  <meta name="description" content="Подготовка к ОГЭ и ЕГЭ по математике и физике онлайн и очно. 9 лет опыта, средний балл учеников — 82. Бесплатное пробное занятие и личный план подготовки.">
+
+  <!-- ===== Open Graph ===== -->
+  <!-- Для реального сайта: og:image — полный адрес (https://ваш-домен/img/og.png) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Репетитор по математике и физике — ОГЭ и ЕГЭ">
+  <meta property="og:description" content="Спокойная подготовка без зубрёжки. Бесплатное пробное занятие.">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+
+  <!-- Шрифты: Rubik (основной) + Caveat (рукописные пометки), оба с кириллицей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="На главную">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span class="logo__text">Андрей Викторович<small>математика и физика</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#subjects" class="nav__link">Предметы</a>
+        <a href="#prices" class="nav__link">Цены</a>
+        <a href="#results" class="nav__link">Результаты</a>
+        <a href="#faq" class="nav__link">Вопросы</a>
+        <a href="#signup" class="btn btn--primary nav__cta-mobile">Пробное занятие</a>
+      </nav>
+
+      <a href="#signup" class="btn btn--primary header__cta">Пробное занятие</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===================== 1. ПЕРВЫЙ ЭКРАН ===================== -->
+    <section class="hero paper">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__label">Репетитор · 7–11 класс · онлайн и очно</p>
+          <h1 class="hero__title">Подготовлю к&nbsp;<mark>ОГЭ и&nbsp;ЕГЭ</mark> по&nbsp;математике и&nbsp;физике — спокойно и&nbsp;без&nbsp;зубрёжки</h1>
+          <p class="hero__text">Найдём пробелы, составим личный план и&nbsp;будем двигаться по&nbsp;нему шаг за&nbsp;шагом. Родители каждый месяц получают отчёт о&nbsp;прогрессе.</p>
+
+          <div class="hero__buttons">
+            <a href="#signup" class="btn btn--primary">Записаться на&nbsp;бесплатное пробное</a>
+            <a href="#prices" class="btn btn--outline">Цены</a>
+          </div>
+
+          <ul class="hero__facts">
+            <li><b>9 лет</b> опыта</li>
+            <li><b>82</b> средний балл ЕГЭ</li>
+            <li><b>140+</b> учеников</li>
+          </ul>
+        </div>
+
+        <!-- Карточка-«фото» + доска с формулами. Для реального сайта: <img src="img/photo.jpg"> -->
+        <div class="hero__visual" aria-hidden="true">
+          <img src="img/board.svg" alt="" class="hero__board" width="520" height="440">
+          <div class="photo-card">
+            <div class="photo-card__img">АВ</div>
+            <p class="photo-card__name">Андрей Викторович</p>
+            <p class="photo-card__role">математика · физика</p>
+          </div>
+          <span class="note note--1">+28 баллов!</span>
+          <span class="note note--2">понятно с 1-го раза ✓</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. ОБО МНЕ И КАК ПРОХОДЯТ ЗАНЯТИЯ ===================== -->
+    <section class="about section" id="about">
+      <div class="container about__inner">
+        <div class="about__text reveal">
+          <p class="section__label">Обо мне</p>
+          <h2 class="section__title">Объясняю так, чтобы стало понятно, а&nbsp;не&nbsp;просто «решено»</h2>
+          <p>Окончил технический университет по&nbsp;специальности «прикладная математика». 9&nbsp;лет готовлю школьников к&nbsp;экзаменам, последние 5&nbsp;— в&nbsp;том числе онлайн.</p>
+          <p>Не&nbsp;заставляю заучивать решения: разбираем, <span class="hand">почему</span> оно работает. Тогда задачу на&nbsp;экзамене, даже незнакомую, можно решить самому.</p>
+        </div>
+
+        <ol class="steps reveal">
+          <li class="step">
+            <span class="step__num">1</span>
+            <div><h3>Пробное занятие</h3><p>Бесплатно, 40 минут. Знакомимся и&nbsp;решаем пару задач.</p></div>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <div><h3>Диагностика</h3><p>Короткий тест по&nbsp;темам экзамена — видим, где пробелы.</p></div>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <div><h3>Личный план</h3><p>Расписываю темы по&nbsp;неделям до&nbsp;самого экзамена.</p></div>
+          </li>
+          <li class="step">
+            <span class="step__num">4</span>
+            <div><h3>Занятия и&nbsp;отчёты</h3><p>Домашка с&nbsp;проверкой, пробники раз в&nbsp;месяц, отчёт родителям.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 3. ПРЕДМЕТЫ ===================== -->
+    <section class="subjects section section--tint" id="subjects">
+      <div class="container">
+        <p class="section__label section__label--center">Предметы</p>
+        <h2 class="section__title section__title--center">С чем помогу</h2>
+
+        <div class="subjects__grid">
+          <article class="subject reveal">
+            <span class="subject__icon">√x</span>
+            <h3>ОГЭ по математике</h3>
+            <p>9 класс. Уверенная «4–5», разбор второй части.</p>
+            <p class="subject__meta">от 4 месяцев</p>
+          </article>
+          <article class="subject subject--accent reveal">
+            <span class="subject__icon">∫</span>
+            <h3>ЕГЭ профиль</h3>
+            <p>10–11 класс. Цель 70–90+ баллов, задачи с параметром и&nbsp;экономические.</p>
+            <p class="subject__meta">от 6 месяцев</p>
+          </article>
+          <article class="subject reveal">
+            <span class="subject__icon">F</span>
+            <h3>ОГЭ по физике</h3>
+            <p>9 класс. Формулы без зазубривания, лабораторная работа.</p>
+            <p class="subject__meta">от 4 месяцев</p>
+          </article>
+          <article class="subject reveal">
+            <span class="subject__icon">λ</span>
+            <h3>ЕГЭ по физике</h3>
+            <p>10–11 класс. Механика, электричество, задачи второй части.</p>
+            <p class="subject__meta">от 6 месяцев</p>
+          </article>
+          <article class="subject reveal">
+            <span class="subject__icon">7+</span>
+            <h3>Школьная программа</h3>
+            <p>7–11 класс. Закрываем пробелы, подтягиваем оценки, готовим к&nbsp;контрольным.</p>
+            <p class="subject__meta">в любое время</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. ФОРМАТЫ И ЦЕНЫ ===================== -->
+    <!-- Цены хранятся в атрибутах data-online / data-offline, переключаются в script.js -->
+    <section class="prices section" id="prices">
+      <div class="container">
+        <p class="section__label section__label--center">Форматы и цены</p>
+        <h2 class="section__title section__title--center">Сколько стоят занятия</h2>
+
+        <div class="switch" role="group" aria-label="Формат занятий">
+          <button type="button" class="switch__btn is-active" data-format="online" aria-pressed="true">Онлайн</button>
+          <button type="button" class="switch__btn" data-format="offline" aria-pressed="false">Очно</button>
+        </div>
+        <p class="switch__hint" id="format-hint">Занятия в Zoom или Telegram с онлайн-доской. Запись урока остаётся у вас.</p>
+
+        <div class="prices__grid">
+          <article class="price reveal">
+            <h3 class="price__title">Индивидуально</h3>
+            <p class="price__value"><span data-online="1 800" data-offline="2 200">1 800</span> ₽</p>
+            <p class="price__per">за занятие 60 минут</p>
+            <ul class="price__list">
+              <li>Темп и программа под&nbsp;ученика</li>
+              <li>Проверка домашки</li>
+              <li>Ответы на&nbsp;вопросы в&nbsp;мессенджере</li>
+            </ul>
+            <a href="#signup" class="btn btn--outline btn--full">Выбрать</a>
+          </article>
+
+          <article class="price price--best reveal">
+            <span class="price__badge">Выгодно</span>
+            <h3 class="price__title">Пакет 8 занятий</h3>
+            <p class="price__value"><span data-online="12 960" data-offline="15 840">12 960</span> ₽</p>
+            <p class="price__per">−10% · <span data-online="1 620" data-offline="1 980">1 620</span> ₽ за&nbsp;занятие</p>
+            <ul class="price__list">
+              <li>Всё из&nbsp;индивидуального формата</li>
+              <li>Пробник ЕГЭ/ОГЭ с&nbsp;разбором</li>
+              <li>Отчёт для родителей</li>
+            </ul>
+            <a href="#signup" class="btn btn--primary btn--full">Выбрать</a>
+          </article>
+
+          <article class="price reveal">
+            <h3 class="price__title">Мини-группа</h3>
+            <p class="price__value"><span data-online="900" data-offline="1 100">900</span> ₽</p>
+            <p class="price__per">с человека за 90 минут</p>
+            <ul class="price__list">
+              <li>До 4 учеников одного уровня</li>
+              <li>Разбор типовых заданий</li>
+              <li>Общий чат группы</li>
+            </ul>
+            <a href="#signup" class="btn btn--outline btn--full">Выбрать</a>
+          </article>
+        </div>
+
+        <p class="prices__note"><span class="hand">Первое занятие — бесплатно.</span> Перенос урока без доплаты, если предупредить за&nbsp;12 часов.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 5. РЕЗУЛЬТАТЫ И ОТЗЫВЫ ===================== -->
+    <!-- Полоски: --from и --to — баллы из 100. Данные вымышленные -->
+    <section class="results section section--tint" id="results">
+      <div class="container">
+        <p class="section__label section__label--center">Результаты</p>
+        <h2 class="section__title section__title--center">Было → стало</h2>
+
+        <ul class="bars reveal">
+          <li class="bar" style="--from: 48; --to: 86;">
+            <span class="bar__name">Маша, ЕГЭ профиль</span>
+            <span class="bar__track"><span class="bar__from"></span><span class="bar__to"></span></span>
+            <span class="bar__score">48 → <b>86</b></span>
+          </li>
+          <li class="bar" style="--from: 39; --to: 74;">
+            <span class="bar__name">Артём, ЕГЭ физика</span>
+            <span class="bar__track"><span class="bar__from"></span><span class="bar__to"></span></span>
+            <span class="bar__score">39 → <b>74</b></span>
+          </li>
+          <li class="bar" style="--from: 55; --to: 90;">
+            <span class="bar__name">Даня, ОГЭ математика</span>
+            <span class="bar__track"><span class="bar__from"></span><span class="bar__to"></span></span>
+            <span class="bar__score">«3» → <b>«5»</b></span>
+          </li>
+          <li class="bar" style="--from: 62; --to: 94;">
+            <span class="bar__name">Лиза, ЕГЭ профиль</span>
+            <span class="bar__track"><span class="bar__from"></span><span class="bar__to"></span></span>
+            <span class="bar__score">62 → <b>94</b></span>
+          </li>
+        </ul>
+        <p class="bars__legend"><span class="dot dot--from"></span>первый пробник <span class="dot dot--to"></span>итог на&nbsp;экзамене</p>
+
+        <div class="reviews">
+          <blockquote class="review reveal">
+            <p>«Сын боялся физики с&nbsp;8 класса. Через полгода сам решает задачи второй части и&nbsp;говорит, что это „как головоломки“. Отчёты очень помогают понять, что происходит».</p>
+            <footer><b>Ольга</b>, мама ученика 10 класса</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Андрей Викторович не&nbsp;ругает за&nbsp;ошибки, а&nbsp;разбирает, откуда они взялись. Параметры перестали пугать — на&nbsp;ЕГЭ решила 18-е».</p>
+            <footer><b>Лиза</b>, выпускница, 94 балла</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Занимались онлайн из&nbsp;другого города. Связь, доска, записи уроков — всё удобно. ОГЭ сдал на&nbsp;пятёрку».</p>
+            <footer><b>Даниил</b>, 9 класс</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. FAQ ===================== -->
+    <!-- <details> раскрывается без JavaScript; script.js только закрывает соседние вопросы -->
+    <section class="faq section" id="faq">
+      <div class="container faq__inner">
+        <div>
+          <p class="section__label">Вопросы</p>
+          <h2 class="section__title">Частые вопросы</h2>
+          <p class="faq__lead">Не нашли ответ? Напишите в&nbsp;<a href="https://t.me/username" target="_blank" rel="noopener">Telegram</a> — отвечаю в&nbsp;течение часа.</p>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq-item" open>
+            <summary>С какого класса лучше начинать подготовку?</summary>
+            <p>К ОГЭ — с&nbsp;начала 9 класса, к&nbsp;ЕГЭ — с&nbsp;10-го или с&nbsp;начала 11-го. Но&nbsp;и&nbsp;за&nbsp;4–5 месяцев можно заметно поднять балл, если заниматься 2&nbsp;раза в&nbsp;неделю.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что нужно для онлайн-занятий?</summary>
+            <p>Компьютер или планшет с&nbsp;интернетом и&nbsp;наушники. Пишем на&nbsp;общей онлайн-доске, ссылку присылаю перед уроком. Запись занятия остаётся у&nbsp;вас.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Сколько задаёте домашки?</summary>
+            <p>Около 40–60 минут на&nbsp;одно занятие. Проверяю до&nbsp;следующего урока и&nbsp;оставляю комментарии к&nbsp;ошибкам.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли перенести или пропустить занятие?</summary>
+            <p>Да, без доплаты, если предупредить минимум за&nbsp;12 часов. Пропущенную тему разберём на&nbsp;следующем уроке.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Где проходят очные занятия?</summary>
+            <p>В учебном кабинете в&nbsp;5 минутах пешком от&nbsp;метро. Точный адрес пришлю после записи.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. ЗАПИСЬ И КОНТАКТЫ ===================== -->
+    <section class="signup section paper" id="signup">
+      <div class="container signup__inner">
+        <div class="signup__info reveal">
+          <p class="section__label">Запись</p>
+          <h2 class="section__title">Бесплатное пробное занятие</h2>
+          <p>Оставьте заявку — свяжусь в&nbsp;течение дня, договоримся о&nbsp;времени. Ни&nbsp;к&nbsp;чему не&nbsp;обязывает.</p>
+
+          <!-- Кнопки связи. Замените номер и username на реальные -->
+          <div class="messengers">
+            <a href="https://t.me/username" class="messenger messenger--tg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+              Telegram
+            </a>
+            <a href="https://wa.me/79990005566" class="messenger messenger--wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+79990005566" class="messenger messenger--phone">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+              +7 (999) 000-55-66
+            </a>
+          </div>
+          <p class="signup__hours">Отвечаю ежедневно с&nbsp;10:00 до&nbsp;21:00</p>
+        </div>
+
+        <div class="form-card reveal">
+          <form class="form" id="signup-form" novalidate>
+            <div class="form__row">
+              <label class="form__field">
+                <span>Имя ученика или родителя</span>
+                <input type="text" name="name" placeholder="Например, Ольга" required autocomplete="name">
+              </label>
+              <label class="form__field">
+                <span>Телефон</span>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" inputmode="tel">
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label class="form__field">
+                <span>Класс</span>
+                <select name="grade" required>
+                  <option value="">Выберите</option>
+                  <option>7 класс</option><option>8 класс</option><option>9 класс</option>
+                  <option>10 класс</option><option>11 класс</option><option>Студент / взрослый</option>
+                </select>
+              </label>
+              <label class="form__field">
+                <span>Предмет</span>
+                <select name="subject" required>
+                  <option value="">Выберите</option>
+                  <option>Математика</option>
+                  <option>Физика</option>
+                  <option>Оба предмета</option>
+                </select>
+              </label>
+            </div>
+
+            <!-- Цель: кнопки-«чипсы» на радиокнопках -->
+            <fieldset class="chips">
+              <legend>Цель</legend>
+              <label class="chip"><input type="radio" name="goal" value="ОГЭ" checked><span>ОГЭ</span></label>
+              <label class="chip"><input type="radio" name="goal" value="ЕГЭ"><span>ЕГЭ</span></label>
+              <label class="chip"><input type="radio" name="goal" value="Школа"><span>Школьная программа</span></label>
+            </fieldset>
+
+            <label class="form__field">
+              <span>Комментарий (необязательно)</span>
+              <textarea name="comment" rows="3" placeholder="Например: сейчас «3» по алгебре, хотим 80+ на ЕГЭ"></textarea>
+            </label>
+
+            <p class="form__error" id="form-error" role="alert"></p>
+            <button type="submit" class="btn btn--primary btn--full">Записаться на пробное</button>
+            <p class="form__policy">Нажимая кнопку, вы соглашаетесь на&nbsp;обработку персональных данных.</p>
+          </form>
+
+          <div class="form__success" id="form-success" hidden>
+            <div class="form__success-icon">✓</div>
+            <p><b>Спасибо!</b> Мы свяжемся с&nbsp;вами.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">
+        <img src="img/logo.svg" alt="" width="36" height="36">
+        <span class="logo__text">Андрей Викторович<small>математика и физика</small></span>
+      </a>
+      <nav class="footer__links" aria-label="Контакты">
+        <a href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79990005566" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+79990005566">+7 (999) 000-55-66</a>
+      </nav>
+      <p class="footer__demo">Демо-проект. Компания вымышленная.</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка связи (только на мобильных) -->
+  <a href="https://t.me/username" class="float-btn" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

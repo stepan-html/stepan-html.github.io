@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300">
+  <!-- Стилизованная карта-заглушка (адрес вымышленный) -->
+  <rect width="560" height="300" fill="#E4E7EC"/>
+
+  <!-- Промзона -->
+  <g fill="#D3D7DE">
+    <rect x="20" y="20" width="160" height="100" rx="3"/>
+    <rect x="210" y="20" width="140" height="100" rx="3"/>
+    <rect x="380" y="20" width="160" height="100" rx="3"/>
+    <rect x="20" y="180" width="160" height="100" rx="3"/>
+    <rect x="380" y="180" width="160" height="100" rx="3"/>
+  </g>
+  <!-- Дороги -->
+  <g fill="#FFFFFF">
+    <rect x="0" y="134" width="560" height="34"/>
+    <rect x="190" y="0" width="12" height="300"/>
+    <rect x="360" y="0" width="12" height="300"/>
+  </g>
+  <path d="M0 151 H560" stroke="#C4C9D1" stroke-width="2" stroke-dasharray="14 10"/>
+  <text x="24" y="128" font-family="Arial, sans-serif" font-size="12" fill="#646B78">ул. Промышленная</text>
+
+  <!-- Автосервис -->
+  <rect x="210" y="180" width="140" height="100" rx="3" fill="#FFE3D1" stroke="#F26B1D" stroke-width="2"/>
+  <g transform="translate(280 194)">
+    <path d="M0 44c-16-20-24-32-24-44a24 24 0 0 1 48 0c0 12-8 24-24 44z" fill="#F26B1D"/>
+    <circle cx="0" cy="0" r="9" fill="#fff"/>
+  </g>
+  <text x="280" y="268" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1C1F24" text-anchor="middle">Промышленная, 24</text>
+</svg>

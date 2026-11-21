@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Логотип и фавиконка: гранёный «кремень» с буквой К -->
+  <path d="M32 3 58 18v28L32 61 6 46V18z" fill="#121212" stroke="#C9A04A" stroke-width="3"/>
+  <path d="M24 18v28M24 32l14-14M28 29l12 17" fill="none" stroke="#C9A04A" stroke-width="5" stroke-linecap="square"/>
+</svg>
